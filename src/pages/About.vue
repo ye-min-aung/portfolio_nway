@@ -2,7 +2,7 @@
 </script>
 <template>
   <div class="container">
-    <h1>home</h1>
+    <h1>About</h1>
   </div>
 </template>
 <style>
