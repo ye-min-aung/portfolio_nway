@@ -5,5 +5,4 @@ import Index from './pages/index.vue';
   <Index/>
 </template>
 <style>
-@import "./assets/styles.css";
 </style>
