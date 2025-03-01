@@ -1,8 +1,12 @@
-<script setup>
-import Index from './pages/index.vue';
-</script>
 <template>
-  <Index/>
+  <Navbar />
+  <router-view></router-view>
 </template>
-<style>
-</style>
+
+<script>
+import Navbar from './components/Navbar.vue';
+
+export default {
+  components: { Navbar }
+};
+</script>
