@@ -34,8 +34,9 @@ const router = useRouter();
 const navigateToAbout = () => router.push("/about");
 </script>
 
-<style scoped>
+<style>
 @import "../assets/styles.css";
+
 
 .container {
   margin-top: 80px;
