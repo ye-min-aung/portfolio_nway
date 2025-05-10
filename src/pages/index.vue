@@ -12,7 +12,8 @@
           applications, I enjoy learning new technologies and improving my
           skills.
         </p>
-        <Button :label="'Let’s Curious About Nway'" @click="navigateToAbout" />
+
+        <Button @click="navigateToAbout" :label="'Let’s Curious About Nway'" />
       </div>
 
       <div class="vector-image">
@@ -34,12 +35,12 @@ const router = useRouter();
 const navigateToAbout = () => router.push("/about");
 </script>
 
-<style>
+<style scoped>
 @import "../assets/styles.css";
 
 
 .container {
-  margin-top: 80px;
+  margin-top: 80px; 
 }
 
 .content {
@@ -83,12 +84,12 @@ const navigateToAbout = () => router.push("/about");
 .vector-image img {
   width: 350px;
   height: auto;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5)); /* Soft shadow */
   mask-image: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.096) 60%,
     rgba(0, 0, 0, 0) 90%
-  );
+  ); 
   -webkit-mask-image: radial-gradient(
     circle,
     rgba(0, 0, 0, 1) 60%,
@@ -102,12 +103,12 @@ const navigateToAbout = () => router.push("/about");
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
-  height: 400px;
+  width: 400px; 
+  height: 400px; 
   background: linear-gradient(
     45deg,
     rgba(255, 255, 204, 0.397),
-    #0a192fe1
+    /* Light yellow */ #0a192fe1 /* Dark navy blue */
   );
   clip-path: polygon(
     0 0,
@@ -115,9 +116,8 @@ const navigateToAbout = () => router.push("/about");
     100% 50%,
     50% 100%,
     0% 100%
-  );
-  z-index: 1;
-  border-radius: 15px;
+  ); 
+  z-index: 1; 
 }
 
 @media (max-width: 992px) {
@@ -128,78 +128,90 @@ const navigateToAbout = () => router.push("/about");
     margin: 0px;
   }
   .name {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 32px; 
+    margin-bottom: 10px; 
   }
+
   .moto {
-    font-size: 30px;
+    font-size: 30px; 
   }
+
   .letter {
-    width: 100%;
-    font-size: 25px;
+    width: 100%; 
+    font-size: 25px; 
     line-height: 50px;
+
   }
+
   .vector-image img {
-    width: 300px;
-    height: auto;
+    width: 300px; 
+    height: auto; 
     margin: 10px 0 10px 10px;
   }
+
   .vector-image::before {
-    width: 350px;
-    height: 300px;
+    width: 350px; 
+    height: 300px; 
   }
+
   .content {
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align the text */
+    text-align: justify; /* Align text in the center */
   }
+
   .vector-image {
-    order: -1;
+    order: -1; /* Place the image above the paragraphs */
   }
 }
-
 @media (max-width: 480px) {
   .container {
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 0; /* Adjusted padding for better spacing */
   }
   .content {
     margin: 10%;
   }
   .name {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 22px; /* Adjust font size */
+    margin-bottom: 10px; /* Adds space between name and image */
   }
+
   .moto {
-    font-size: 20px;
+    font-size: 20px; /* Adjust font size */
   }
+
   .letter {
-    width: 100%;
-    font-size: 15px;
+    width: 100%; /* Ensure full width for text */
+    font-size: 15px; /* Adjust font size */
     line-height: 25px;
   }
+
   .vector-image img {
-    width: 220px;
-    height: auto;
+    width: 220px; /* Adjust the image size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 5px;
   }
+
   .vector-image::before {
-    width: 250px;
-    height: 250px;
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
     clip-path: polygon(
       0 0,
       80% 0,
       100% 30%,
       50% 100%,
       0% 100%
-    );
+    ); /* Unequal corners */
   }
+
   .content {
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align the text */
+    text-align: justify; /* Align text in the center */
   }
+
   .vector-image {
-    order: -1;
+    order: -1; /* Place the image above the paragraphs */
   }
 }
 </style>
