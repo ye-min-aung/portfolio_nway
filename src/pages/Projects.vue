@@ -84,7 +84,7 @@
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .content {

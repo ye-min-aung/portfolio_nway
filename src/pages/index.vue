@@ -12,7 +12,7 @@
           applications, I enjoy learning new technologies and improving my
           skills.
         </p>
-        <Button :label="'Let’s Curious About Nway'" />
+        <Button :label="'Let’s Curious About Nway'" @click="navigateToAbout" />
       </div>
 
       <div class="vector-image">
@@ -28,6 +28,10 @@
 
 <script setup>
 import Button from "../components/button.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const navigateToAbout = () => router.push("/about");
 </script>
 
 <style scoped>

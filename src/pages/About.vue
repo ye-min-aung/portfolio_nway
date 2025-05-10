@@ -92,6 +92,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 25px;
+    margin:10px;
   }
 
   .intro {
