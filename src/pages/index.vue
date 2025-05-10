@@ -36,7 +36,7 @@ const navigateToAbout = () => router.push("/about");
 </script>
 
 <style scoped>
-@import "@/assets/style.css";
+@import "../assets/styles.css";
 
 
 .container {
