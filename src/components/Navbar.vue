@@ -1,71 +1,124 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container py-2">
-      <div >
-        <img class="logo" src="../assets/images/icon.PNG" alt="" />
-      </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
+  <div>
+    <div class="main-nav-bar">
+      <button @click="navigateToHome" class="nav-btn">
+        <i class="fas fa-home icon"></i> <span>Home</span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" to="/">
-              <span class="digit">01.</span>Home||
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/projects">
-              <span class="digit">02.</span>About||
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/about">
-              <span class="digit">03.</span>Projects||
-            </router-link>
-          </li>
-        </ul>
-      </div>
+      <button @click="navigateToAbout" class="nav-btn">
+        <i class="fas fa-user icon"></i> <span>About</span>
+      </button>
+      <button @click="navigateToSkill" class="nav-btn">
+        <i class="fas fa-cogs icon"></i> <span>Skills</span>
+      </button>
+      <button @click="navigateToProject" class="nav-btn">
+        <i class="fas fa-project-diagram icon"></i> <span>Projects</span>
+      </button>
     </div>
-  </nav>
+  </div>
 </template>
 
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const navigateToHome = () => router.push("/");
+const navigateToAbout = () => router.push("/about");
+const navigateToSkill = () => router.push("/skills");
+const navigateToProject = () => router.push("/projects");
+</script>
+
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
-.navbar {
-  background-color: #0a192f !important;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0a192f;
 }
 
-.logo {
-  width: 50px;
-  height: 30px;
+.main-nav-bar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(10, 25, 47, 0.95);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
-/* Navbar Links */
-.navbar-nav {
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, rgba(255, 255, 204, 0.2), rgba(10, 25, 47, 0.9));
+  color: rgb(255, 255, 204);
+  border: none;
+  cursor: pointer;
   font-family: "Space Mono", monospace;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
 }
 
-.navbar-brand,
-.nav-link {
-  color: #ccd6f6 !important;
-  transition: color 0.3s ease;
+.nav-btn:hover {
+  background: rgba(255, 255, 204, 0.568);
+  color: #0a192f;
 }
 
-.nav-link:hover {
-  color: #64ffda !important;
+.nav-btn:active {
+  transform: scale(0.95);
 }
-.digit {
-  color: #64ffda !important;
+
+.icon {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover .icon {
+  color: #0a192f;
+}
+
+@media (max-width: 768px) {
+  .main-nav-bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  .nav-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .nav-btn span {
+    display: none;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
 }
 </style>
