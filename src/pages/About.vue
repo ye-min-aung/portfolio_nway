@@ -92,10 +92,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 25px;
-<<<<<<< HEAD
     margin:10px;
-=======
->>>>>>> 16ec8f2 (implementation)
   }
 
   .intro {

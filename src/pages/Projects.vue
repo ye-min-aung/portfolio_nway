@@ -84,10 +84,6 @@
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-<<<<<<< HEAD
-=======
-  overflow: hidden;
->>>>>>> 16ec8f2 (implementation)
 }
 
 .content {
@@ -157,13 +153,10 @@
 }
 
 @media (max-width: 768px) {
-<<<<<<< HEAD
   .projects-container {
     overflow: scroll;
   }
 
-=======
->>>>>>> 16ec8f2 (implementation)
   .projects-title {
     font-size: 22px;
   }
