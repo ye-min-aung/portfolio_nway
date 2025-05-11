@@ -73,6 +73,7 @@
 <script setup></script>
 
 <style scoped>
+@import "../assets/styles.css";
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
 
 .projects-container {
