@@ -138,12 +138,20 @@ ul li:hover {
 
 @media (max-width: 768px) {
   .container {
+<<<<<<< HEAD
     padding: 15px;
     margin-bottom:30px;
   }
 
   .intro {
     font-size: 20px;
+=======
+    padding: 25px;
+  }
+
+  .intro {
+    font-size: 22px;
+>>>>>>> 16ec8f2 (implementation)
   }
 
   .letter {
@@ -156,7 +164,10 @@ ul li:hover {
 
   ul li {
     font-size: 14px;
+<<<<<<< HEAD
     line-height: 20px;
+=======
+>>>>>>> 16ec8f2 (implementation)
   }
 }
 </style>
